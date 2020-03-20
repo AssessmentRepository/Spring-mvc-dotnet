@@ -1,7 +1,6 @@
 import {
   ComponentFixture,
   TestBed,
-  fakeAsync,
   async
 } from "@angular/core/testing";
 
@@ -167,4 +166,12 @@ describe("AdminComponent", () => {
     const el = de.nativeElement;
     expect(el.textContent).toEqual("Action");
   });
+  it("should have a data", async(() => {
+    let admindata = rows;
+    expect(admindata).toBeTruthy;
+  }));
+  it("should have a equal data", async(() => {
+    let admindata = rows;
+    expect(admindata).toEqual(rows);
+  }));
 });
